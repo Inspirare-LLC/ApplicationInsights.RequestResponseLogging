@@ -3,6 +3,11 @@ Application insight extension for request/response logging
 
 Code taken and modified from article: https://www.azureblue.io/how-to-log-http-request-body-with-asp-net-core-application-insights/
 
+Logs:
+- Request body, if method is POST or PUT (Application insight key: "RequestBody").
+- Request query string (Application insight key: "RequestQueryString").
+- Response body (Application insight key: "ResponseBody").
+
 # Nuget package
 Available as nuget package at https://www.nuget.org/packages/ApplicationInsights.RequestResponseLogging/
 
