@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Jonas Petraška</Authors>
+    <Company>Inspirare, UAB</Company>
+    <Product>Application insight request/response logging</Product>
+    <Description>Application insight extension for request/response logging.</Description>
+    <PackageProjectUrl>https://github.com/Inspirare-LLC/ApplicationInsights.RequestResponseLogging</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
