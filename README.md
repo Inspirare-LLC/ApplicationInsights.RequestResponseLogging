@@ -20,8 +20,8 @@ public void ConfigureServices(IServiceCollection services)
     // ...
     services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
             
-    services.AddTransient<RequestBodyLoggingMiddleware>();
-    services.AddTransient<ResponseBodyLoggingMiddleware>();
+    services.AddTransient<RequestLoggingMiddleware>();
+    services.AddTransient<ResponseLoggingMiddleware>();
 }
 ```
 
@@ -30,8 +30,8 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     // Enable our custom middleware
-    app.UseRequestBodyLogging();
-    app.UseResponseBodyLogging();
+    app.UseRequestLogging();
+    app.UseResponseLogging();
 }
 ```
 
