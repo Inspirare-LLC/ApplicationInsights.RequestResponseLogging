@@ -11,12 +11,12 @@ namespace ApplicationInsights.RequestResponseLogging.Extensions
     /// </summary>
     public static class ApplicationInsightExtensions
     {
-        public static IApplicationBuilder UseRequestBodyLogging(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseRequestLogging(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<RequestLoggingMiddleware>();
         }
 
-        public static IApplicationBuilder UseResponseBodyLogging(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseResponseLogging(this IApplicationBuilder builder)
         {
             return builder.UseMiddleware<ResponseLoggingMiddleware>();
         }
