@@ -8,6 +8,7 @@
     <Description>Application insight extension for request/response logging.</Description>
     <PackageProjectUrl>https://github.com/Inspirare-LLC/ApplicationInsights.RequestResponseLogging</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

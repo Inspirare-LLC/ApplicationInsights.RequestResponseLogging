@@ -48,6 +48,15 @@ namespace ApplicationInsights.RequestResponseLogging.Middlewares
                 requestTelemetry?.Properties.Add("RequestQueryString", context.Request.QueryString.ToString());
             }
 
+            // Additionally log headers
+            if (context.Request.Headers != null)
+            {
+                var requestTelemetry = context.Features.Get<RequestTelemetry>();
+                
+                foreach(var header in context.Request.Headers)
+                    requestTelemetry?.Properties.Add($"RequestHeaders-{header.Key}", header.Value.ToString());
+            }
+
             // Call next middleware in the pipeline
             await next(context);
         }
